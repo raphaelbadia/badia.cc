@@ -1,11 +1,12 @@
-import Link from 'next/link'
+import Link from 'next/link';
+import { FC } from 'react';
 
 const links = [
   { href: 'https://github.com/vercel/next.js', label: 'GitHub' },
   { href: 'https://nextjs.org/docs', label: 'Docs' },
-]
+];
 
-export default function Nav() {
+const Nav: FC = () => {
   return (
     <nav>
       <ul className="flex justify-between items-center p-8">
@@ -25,5 +26,7 @@ export default function Nav() {
         </ul>
       </ul>
     </nav>
-  )
-}
+  );
+};
+
+export default Nav;
