@@ -1,0 +1,9 @@
+.root {
+  @apply h-1/2 flex justify-center items-center;
+}
+
+@screen lg {
+  .root {
+    @apply h-full w-1/2;
+  }
+}

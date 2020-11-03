@@ -1,18 +1,17 @@
-import Button from '@components/Button';
+import Avatar from '@components/Avatar';
+import VoteBlock from '@components/VoteBlock';
 import { FC } from 'react';
-import Nav from '../components/nav';
 
 const IndexPage: FC = () => {
   return (
-    <div>
-      <Nav />
-      <Button>coucou</Button>
-      <div className="py-20">
-        <h1 className="text-5xl text-center text-accent-1">
-          Next.js + Tailwind CSS
-        </h1>
-      </div>
-    </div>
+    <>
+      <VoteBlock style={{ backgroundColor: 'lightblue' }}>
+        <Avatar url="https://64.media.tumblr.com/tumblr_m82woaL5AD1rro1o5o1_1280.jpg" />
+      </VoteBlock>
+      <VoteBlock>
+        <Avatar url="https://64.media.tumblr.com/tumblr_m2gyauUXoh1qbe5pxo1_500.jpg" />
+      </VoteBlock>
+    </>
   );
 };
 
