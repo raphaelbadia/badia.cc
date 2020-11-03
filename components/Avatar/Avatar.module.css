@@ -1,5 +1,5 @@
 .root {
-  @apply h-60 w-60 rounded-full overflow-hidden border-white border-4;
+  @apply h-60 w-60 rounded-full overflow-hidden border-white border-4 cursor-pointer;
 }
 
 .image {
