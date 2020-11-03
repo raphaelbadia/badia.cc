@@ -34,6 +34,7 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
     'jsx-a11y/anchor-is-valid': 'off',
+    'react/require-default-props': 'off',
   },
   settings: {
     'import/parsers': {

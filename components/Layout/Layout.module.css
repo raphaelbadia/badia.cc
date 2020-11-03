@@ -1,0 +1,9 @@
+.root {
+  @apply h-screen w-screen flex flex-col;
+}
+
+@screen lg {
+  .root {
+    @apply flex-row;
+  }
+}
