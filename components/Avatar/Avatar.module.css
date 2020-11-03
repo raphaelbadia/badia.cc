@@ -6,6 +6,10 @@
   @apply h-full w-full object-cover;
 }
 
+.image:hover {
+  @apply transform scale-110;
+}
+
 @screen sm {
   .root {
     @apply h-72 w-72;
