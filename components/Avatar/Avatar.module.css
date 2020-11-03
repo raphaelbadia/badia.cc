@@ -1,0 +1,25 @@
+.root {
+  @apply h-60 w-60 rounded-full overflow-hidden border-white border-4;
+}
+
+.image {
+  @apply h-full w-full object-cover;
+}
+
+@screen sm {
+  .root {
+    @apply h-72 w-72;
+  }
+}
+
+@screen md {
+  .root {
+    @apply h-80 w-80;
+  }
+}
+
+@screen xl {
+  .root {
+    @apply h-96 w-96;
+  }
+}
