@@ -12,6 +12,7 @@
     "@types/classnames": "^2.2.11",
     "@types/jest": "^26.0.15",
     "classnames": "^2.2.6",
+    "dotenv": "^8.2.0",
     "mongodb": "^3.6.2",
     "next": "^10.0.0",
     "react": "^16.13.1",
