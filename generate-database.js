@@ -23,7 +23,7 @@ const main = async () => {
     .then((r) => r.json())
     .then((cats) => {
       return Promise.all(
-        cats.images.map(async (cat) => {
+        cats.images.map(async (cat, i) => {
           const randomName = faker.name.firstName(randomInt(0, 1));
           const buf = await download(cat);
           const swatches = await Vibrant.from(buf).getSwatches();
@@ -45,6 +45,7 @@ const main = async () => {
             ...cat,
             name: randomName,
             palette: ret,
+            elo: 1000,
           };
         })
       );
