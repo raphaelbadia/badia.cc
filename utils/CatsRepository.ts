@@ -1,7 +1,10 @@
+import { ObjectId } from 'mongodb';
+import Arpad from 'arpad';
 import { withMongo } from './mongodb';
 
 export const getCatsPair = async () =>
-  withMongo(async (db) => {
+  withMongo(async (client) => {
+    const db = client.db('catmash');
     const [randomCat] = await db
       .collection('cats')
       .aggregate([
@@ -32,4 +35,30 @@ export const getCatsPair = async () =>
       ])
       .toArray();
     return cats;
+  });
+
+export const updateRankingAfterMatch = async (
+  winnerId: string,
+  looserId: string
+) =>
+  withMongo(async (client) => {
+    const db = client.db('catmash');
+    const collection = db.collection('cats');
+    const winner = await collection.findOne({ _id: ObjectId(winnerId) });
+    const looser = await collection.findOne({ _id: ObjectId(looserId) });
+    const session = client.startSession();
+    const elo = new Arpad();
+
+    await session.withTransaction(async () => {
+      await collection.updateOne(
+        { _id: ObjectId(winnerId) },
+        { $set: { elo: elo.newRatingIfWon(winner.elo, looser.elo) } },
+        { session }
+      );
+      await collection.updateOne(
+        { _id: ObjectId(looserId) },
+        { $set: { elo: elo.newRatingIfLost(looser.elo, winner.elo) } },
+        { session }
+      );
+    });
   });

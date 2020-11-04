@@ -61,5 +61,5 @@ export const connectToDatabase = async () => {
 
 export const withMongo = async (fn) => {
   const { client } = await connectToDatabase();
-  return fn(client.db('catmash'));
+  return fn(client);
 };
