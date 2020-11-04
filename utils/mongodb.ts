@@ -37,7 +37,7 @@ let cached = global.mongo;
 // eslint-disable-next-line no-multi-assign
 if (!cached) cached = global.mongo = {};
 
-export default async function connectToDatabase() {
+export const connectToDatabase = async () => {
   if (cached.conn) return cached.conn;
   if (!cached.promise) {
     const conn = { client: undefined, db: undefined };
@@ -57,4 +57,9 @@ export default async function connectToDatabase() {
   }
   await cached.promise;
   return cached.conn;
-}
+};
+
+export const withMongo = async (fn) => {
+  const { client } = await connectToDatabase();
+  return fn(client.db('catmash'));
+};

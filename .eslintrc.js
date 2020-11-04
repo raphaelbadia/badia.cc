@@ -37,6 +37,8 @@ module.exports = {
     'jsx-a11y/anchor-is-valid': 'off',
     'react/require-default-props': 'off',
     'no-underscore-dangle': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    'import/prefer-default-export': 'off',
   },
   settings: {
     'import/parsers': {

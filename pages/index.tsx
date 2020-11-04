@@ -1,6 +1,6 @@
-import Avatar from '@components/Avatar';
-import VoteBlock from '@components/VoteBlock';
 import { FC } from 'react';
+import Avatar from '../components/Avatar';
+import VoteBlock from '../components/VoteBlock';
 
 const IndexPage: FC = () => {
   return (
