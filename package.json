@@ -4,11 +4,13 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "jest --watch"
   },
   "dependencies": {
     "@tailwindcss/ui": "^0.7.2",
     "@types/classnames": "^2.2.11",
+    "@types/jest": "^26.0.15",
     "classnames": "^2.2.6",
     "mongodb": "^3.6.2",
     "next": "^10.0.0",
@@ -20,6 +22,7 @@
     "@types/react": "^16.9.55",
     "@typescript-eslint/eslint-plugin": "^4.6.0",
     "@typescript-eslint/parser": "^4.6.0",
+    "babel-jest": "^26.6.2",
     "colorthief": "^2.3.2",
     "eslint": "^7.12.1",
     "eslint-config-airbnb": "^18.2.0",
@@ -32,6 +35,8 @@
     "faker": "^5.1.0",
     "husky": "^4.3.0",
     "isomorphic-unfetch": "^3.1.0",
+    "jest": "^26.6.2",
+    "node-mocks-http": "^1.9.0",
     "node-vibrant": "^3.2.1-alpha.1",
     "postcss-flexbugs-fixes": "^5.0.0",
     "postcss-preset-env": "^6.7.0",

@@ -3,6 +3,7 @@ module.exports = {
     browser: true,
     node: true,
     es2020: true,
+    jest: true,
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -35,6 +36,7 @@ module.exports = {
     '@typescript-eslint/no-non-null-assertion': 'off',
     'jsx-a11y/anchor-is-valid': 'off',
     'react/require-default-props': 'off',
+    'no-underscore-dangle': 'off',
   },
   settings: {
     'import/parsers': {

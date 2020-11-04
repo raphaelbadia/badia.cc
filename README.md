@@ -20,6 +20,6 @@ The data from https://latelier.co/data/cats.json has been enrished by generating
 - a name with `fakerjs`
 - a color palette extracted from the image using `Vibrantjs`
 
-Then, it has been saved into my FaunaDB database.
+Then, it has been saved into my MongoDB database.
 
-The very quick and dirty code that did that is available at generate-database.js. The dependencies are left in devDependencies so you can run it with your own FaunaDB key if you want to.
+The very quick and dirty code that did that is available at generate-database.js. The dependencies are left in devDependencies so you can run it with your own MongoDB access codes if you want to.
