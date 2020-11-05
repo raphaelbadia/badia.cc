@@ -4,6 +4,7 @@ export const client = (endpoint, customConfig = {}) => {
     ...customConfig,
   };
   return window.fetch(`/api/${endpoint}`, config).then(async (response) => {
+    if (response.status === 204) return null;
     const data = await response.json();
     if (response.ok) {
       return data;
@@ -11,3 +12,8 @@ export const client = (endpoint, customConfig = {}) => {
     return Promise.reject(data);
   });
 };
+
+export const paramsToString = (params) =>
+  Object.keys(params)
+    .map((key) => `${key}=${params[key]}`)
+    .join('&');
