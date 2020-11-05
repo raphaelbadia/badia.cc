@@ -1,0 +1,21 @@
+.root {
+  @apply absolute h-full flex items-center;
+}
+
+.inner {
+  @apply bg-black text-white py-4 px-7 pl-5 rounded-r-full text-lg transform cursor-pointer;
+}
+
+.inner:hover {
+  @apply scale-105;
+}
+
+@screen lg {
+  .root {
+    @apply w-full items-start justify-center;
+  }
+
+  .inner {
+    @apply rounded-xl text-2xl px-8 rounded-t-none py-4;
+  }
+}

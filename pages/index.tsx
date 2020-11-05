@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { useQuery, useMutation } from 'react-query';
+import LinkToScoreboard from '../components/LinkToScoreboard';
 import VoteBlock from '../components/VoteBlock';
 import { client, paramsToString } from '../utils/client';
 
@@ -34,6 +35,7 @@ const IndexPage: FC = () => {
 
   return (
     <>
+      <LinkToScoreboard />
       <VoteBlock item={left} handleVote={handleVote} itemKey="left" />
       <VoteBlock item={right} handleVote={handleVote} itemKey="right" />
     </>
