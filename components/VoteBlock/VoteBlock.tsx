@@ -1,15 +1,27 @@
-import { CSSProperties, FC, ReactNode } from 'react';
+import { FC } from 'react';
+import cn from 'classnames';
 import s from './VoteBlock.module.css';
+import Avatar from '../Avatar';
 
 interface Props {
-  children: ReactNode | any;
-  style?: CSSProperties;
+  item: { _id: string; url: string; palette: any };
+  handleVote: (id: string) => void;
+  itemKey: string;
 }
 
-const VoteBlock: FC<Props> = ({ children, style }: Props) => {
+const VoteBlock: FC<Props> = ({ item, handleVote, itemKey }: Props) => {
   return (
-    <div className={s.root} style={style}>
-      {children}
+    <div
+      key={itemKey}
+      className={cn(s.root, {
+        [s.hidden]: !item,
+        'bg-gray-900': !item,
+      })}
+      style={{
+        backgroundColor: item && item.palette.Vibrant.hex,
+      }}
+    >
+      {item && <Avatar url={item.url} onClick={() => handleVote(item._id)} />}
     </div>
   );
 };

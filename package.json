@@ -8,6 +8,7 @@
     "test": "jest --watch"
   },
   "dependencies": {
+    "@rooks/use-timeout": "^3.6.0",
     "@tailwindcss/ui": "^0.7.2",
     "@types/classnames": "^2.2.11",
     "@types/jest": "^26.0.15",

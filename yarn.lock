@@ -1570,6 +1570,11 @@
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.5.4.tgz#de25b5da9f727985a3757fd59b5d028aba75841a"
   integrity sha512-ZpKr+WTb8zsajqgDkvCEWgp6d5eJT6Q63Ng2neTbzBO76Lbe91vX/iVIW9dikq+Fs3yEo+ls4cxeXABD2LtcbQ==
 
+"@rooks/use-timeout@^3.6.0":
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/@rooks/use-timeout/-/use-timeout-3.6.0.tgz#03826a90c2cc3ec6fcc85ac4e1554e83aa3f1a9d"
+  integrity sha512-yxOlVXXPblXOzKf8ZfFeV3To9Cm21ojLnW7lXW9tYSwMNRtxY1oK3zWIXVud1lJOZHwjSHTRv1FX9sCCHAUXrQ==
+
 "@sinonjs/commons@^1.7.0":
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/@sinonjs/commons/-/commons-1.8.1.tgz#e7df00f98a203324f6dc7cc606cad9d4a8ab2217"

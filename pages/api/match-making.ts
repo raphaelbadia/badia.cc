@@ -5,10 +5,6 @@ export default async (
   _req: NextApiRequest,
   res: NextApiResponse
 ): Promise<void> => {
-  //   const {
-  //     query: { animal },
-  //   } = req;
-
   try {
     const cats = await getCatsPair();
 
