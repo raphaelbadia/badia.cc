@@ -1,16 +1,29 @@
 import { FC } from 'react';
+import { useQuery } from 'react-query';
 import Avatar from '../components/Avatar';
 import VoteBlock from '../components/VoteBlock';
+import { client } from '../utils/client';
+
+function getNextMatch() {
+  return client('match-making');
+}
 
 const IndexPage: FC = () => {
+  const { status, data, refetch } = useQuery('current-match', getNextMatch);
+
   return (
     <>
-      <VoteBlock style={{ backgroundColor: 'lightblue' }}>
-        <Avatar url="https://64.media.tumblr.com/tumblr_m82woaL5AD1rro1o5o1_1280.jpg" />
-      </VoteBlock>
-      <VoteBlock>
-        <Avatar url="https://64.media.tumblr.com/tumblr_m2gyauUXoh1qbe5pxo1_500.jpg" />
-      </VoteBlock>
+      {status === 'success' &&
+        data.map((cat) => {
+          return (
+            <VoteBlock
+              key={cat._id}
+              style={{ backgroundColor: cat.palette.Vibrant.hex }}
+            >
+              <Avatar url={cat.url} />
+            </VoteBlock>
+          );
+        })}
     </>
   );
 };

@@ -34,7 +34,7 @@ export const getCatsPair = async () =>
         { $limit: 2 },
       ])
       .toArray();
-    return cats;
+    return cats.map((cat) => cat.doc);
   });
 
 export const updateRankingAfterMatch = async (
