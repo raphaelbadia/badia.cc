@@ -2,6 +2,7 @@ import '../styles/index.css';
 import type { AppProps } from 'next/app';
 import { FC } from 'react';
 import { QueryCache, ReactQueryCacheProvider } from 'react-query';
+import { Provider as ReakitProvider } from 'reakit';
 import Layout from '../components/Layout';
 
 const queryCache = new QueryCache({
@@ -14,11 +15,13 @@ const queryCache = new QueryCache({
 
 const MyApp: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
   return (
-    <ReactQueryCacheProvider queryCache={queryCache}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </ReactQueryCacheProvider>
+    <ReakitProvider>
+      <ReactQueryCacheProvider queryCache={queryCache}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ReactQueryCacheProvider>
+    </ReakitProvider>
   );
 };
 
