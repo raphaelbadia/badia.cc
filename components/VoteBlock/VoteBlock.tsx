@@ -15,7 +15,6 @@ const VoteBlock: FC<Props> = ({ item, handleVote, itemKey }: Props) => {
       key={itemKey}
       className={cn(s.root, {
         [s.hidden]: !item,
-        'bg-gray-900': !item,
       })}
       style={{
         backgroundColor: item && item.palette.Vibrant.hex,

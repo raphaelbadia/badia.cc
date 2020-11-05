@@ -8,6 +8,14 @@ export default async (
   try {
     const cats = await getCatsPair();
 
+    // // sleep to simulate serverless function lag
+    // function sleep(ms) {
+    //   return new Promise((resolve) => {
+    //     setTimeout(resolve, ms);
+    //   });
+    // }
+    // await sleep(2000);
+
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(cats);
   } catch (err) {

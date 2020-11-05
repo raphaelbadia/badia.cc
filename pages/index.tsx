@@ -12,11 +12,13 @@ function submitVote(params) {
 }
 
 const IndexPage: FC = () => {
-  const { status, data, refetch, isFetching } = useQuery(
-    'current-match',
-    getNextMatch
-  );
-  const [postVote] = useMutation(submitVote, {
+  const {
+    status,
+    data,
+    refetch,
+    isFetching: isFetchingNextPictures,
+  } = useQuery('current-match', getNextMatch);
+  const [postVote, { isLoading: isPosting }] = useMutation(submitVote, {
     onSuccess: () => refetch(),
   });
 
@@ -25,8 +27,10 @@ const IndexPage: FC = () => {
     postVote({ winnerId, looserId });
   };
 
-  const left = status === 'success' && !isFetching ? data[0] : null;
-  const right = status === 'success' && !isFetching ? data[1] : null;
+  const showItems =
+    status === 'success' && !isFetchingNextPictures && !isPosting;
+  const left = showItems ? data[0] : null;
+  const right = showItems ? data[1] : null;
 
   return (
     <>
