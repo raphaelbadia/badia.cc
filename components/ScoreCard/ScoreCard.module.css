@@ -1,0 +1,109 @@
+.card {
+  @apply h-full w-full rounded-xl;
+
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  width: 100%;
+  text-align: center;
+  color: whitesmoke;
+  background-color: whitesmoke;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1),
+    0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1),
+    0 16px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  pointer-events: none;
+  background-image: linear-gradient(
+    to bottom,
+    hsla(0, 0%, 0%, 0) 0%,
+    hsla(0, 0%, 0%, 0.009) 11.7%,
+    hsla(0, 0%, 0%, 0.034) 22.1%,
+    hsla(0, 0%, 0%, 0.072) 31.2%,
+    hsla(0, 0%, 0%, 0.123) 39.4%,
+    hsla(0, 0%, 0%, 0.182) 46.6%,
+    hsla(0, 0%, 0%, 0.249) 53.1%,
+    hsla(0, 0%, 0%, 0.32) 58.9%,
+    hsla(0, 0%, 0%, 0.394) 64.3%,
+    hsla(0, 0%, 0%, 0.468) 69.3%,
+    hsla(0, 0%, 0%, 0.54) 74.1%,
+    hsla(0, 0%, 0%, 0.607) 78.8%,
+    hsla(0, 0%, 0%, 0.668) 83.6%,
+    hsla(0, 0%, 0%, 0.721) 88.7%,
+    hsla(0, 0%, 0%, 0.762) 94.1%,
+    hsla(0, 0%, 0%, 0.79) 100%
+  );
+  transform: translateY(0%);
+  transition: transform calc(var(--d) * 2) var(--e);
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  transform: translateY(calc(100% - 4.5rem));
+  transition: transform var(--d) var(--e);
+  z-index: 1;
+
+  > * + * {
+    margin-top: 1rem;
+  }
+}
+
+.content > *:not(.title) {
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+}
+
+.card:hover,
+.card:focus-within {
+  .image {
+    /* to move the background color up but we cant style before dynamically... */
+    transform: translateY(0%);
+  }
+
+  &::after {
+    /* move the shadow up */
+    transform: translateY(-50%);
+  }
+
+  .content {
+    transform: translateY(0);
+
+    > *:not(.title) {
+      opacity: 1;
+      transform: translateY(0);
+      transition-delay: calc(var(--d) / 8);
+    }
+  }
+}
+
+.title {
+  @apply text-2xl uppercase font-bold tracking-tight;
+
+  text-shadow: 0 15px 30px rgba(0, 0, 0, 1), 0 5px 15px rgba(0, 0, 0, 1);
+}
+
+.subtitle {
+  @apply text-lg;
+}
+
+.image {
+  @apply w-full rounded-xl absolute object-cover;
+
+  height: 104%;
+  transform: translateY(4%);
+}

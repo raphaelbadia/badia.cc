@@ -1,8 +1,61 @@
 @tailwind base;
 
 /* Write your own custom base styles here */
+
+:root {
+  --d: 700ms;
+  --e: cubic-bezier(0.19, 1, 0.22, 1);
+  --font-sans: 'Rubik', sans-serif;
+  --font-serif: 'Cardo', serif;
+}
+
 * {
   transition: 0.3s all;
+}
+
+html,
+body,
+#__next {
+  height: 100%;
+}
+
+.scoreboard-top-container {
+  @apply bg-white border-8 border-gray-100 rounded-xl p-4;
+
+  height: 700px;
+}
+
+@screen md {
+  @apply p16;
+}
+
+.scoreboard-top3 {
+  @apply flex flex-col gap-3;
+}
+
+@screen md {
+  .scoreboard-top3 {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 50% 50%;
+    grid-gap: 1rem;
+    grid-template-areas:
+      '  .    first   .  '
+      'second first third';
+  }
+}
+
+.first {
+  grid-area: first;
+}
+
+.second {
+  grid-area: second;
+}
+
+.third {
+  grid-area: third;
 }
 
 /* Start purging... */

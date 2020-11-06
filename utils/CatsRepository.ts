@@ -52,12 +52,18 @@ export const updateRankingAfterMatch = async (
     await session.withTransaction(async () => {
       await collection.updateOne(
         { _id: ObjectId(winnerId) },
-        { $set: { elo: elo.newRatingIfWon(winner.elo, looser.elo) } },
+        {
+          $set: { elo: elo.newRatingIfWon(winner.elo, looser.elo) },
+          $inc: { vote: 1 },
+        },
         { session }
       );
       await collection.updateOne(
         { _id: ObjectId(looserId) },
-        { $set: { elo: elo.newRatingIfLost(looser.elo, winner.elo) } },
+        {
+          $set: { elo: elo.newRatingIfLost(looser.elo, winner.elo) },
+          $inc: { vote: 1 },
+        },
         { session }
       );
     });
