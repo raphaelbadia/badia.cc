@@ -62,3 +62,20 @@ export const updateRankingAfterMatch = async (
       );
     });
   });
+
+export const getScoreBoard = async () =>
+  withMongo(async (client) => {
+    const db = client.db('catmash');
+
+    const cats = await db
+      .collection('cats')
+      .aggregate([
+        {
+          $sort: {
+            elo: -1,
+          },
+        },
+      ])
+      .toArray();
+    return cats;
+  });
