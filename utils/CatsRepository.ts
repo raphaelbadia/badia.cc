@@ -5,36 +5,15 @@ import { withMongo } from './mongodb';
 export const getCatsPair = async () =>
   withMongo(async (client) => {
     const db = client.db('catmash');
-    const [randomCat] = await db
-      .collection('cats')
-      .aggregate([
-        {
-          $sample: { size: 1 },
-        },
-      ])
-      .toArray();
     const cats = await db
       .collection('cats')
       .aggregate([
         {
-          $project: {
-            diff: {
-              $abs: {
-                $subtract: [randomCat.elo, '$elo'],
-              },
-            },
-            doc: '$$ROOT',
-          },
+          $sample: { size: 2 },
         },
-        {
-          $sort: {
-            diff: 1,
-          },
-        },
-        { $limit: 2 },
       ])
       .toArray();
-    return cats.map((cat) => cat.doc);
+    return cats;
   });
 
 export const updateRankingAfterMatch = async (
