@@ -22,11 +22,13 @@ body,
 .scoreboard-top-container {
   @apply bg-white border-8 border-gray-100 rounded-xl p-4;
 
-  height: 700px;
+  height: 1000px;
 }
 
 @screen md {
-  @apply p16;
+  .scoreboard-top-container {
+    height: 700px;
+  }
 }
 
 .scoreboard-top3 {
