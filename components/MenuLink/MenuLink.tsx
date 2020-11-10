@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import cn from 'classnames';
+import { Clickable } from 'reakit';
 import Link from '../Link/Link';
 import s from './MenuLink.module.css';
 
@@ -17,9 +18,12 @@ const LinkToScoreboard: React.FC<Props> = (props: Props) => {
       })}
     >
       <Link href={to}>
-        <div className={cn(s.inner, { [s.innerRoot]: to === '/' })}>
+        <Clickable
+          as="button"
+          className={cn(s.inner, { [s.innerRoot]: to === '/' })}
+        >
           {children}
-        </div>
+        </Clickable>
       </Link>
     </div>
   );
