@@ -9,7 +9,7 @@ interface Props {
 
 const Link: React.FC<Props> = ({ href, children, ...props }) => {
   return (
-    <NextLink href={href}>
+    <NextLink href={href} passHref>
       <Clickable as="a" {...props}>
         {children}
       </Clickable>
