@@ -1,3 +1,12 @@
 .root {
-  @apply h-full w-full flex flex-col relative bg-gray-50;
+  @apply grid grid-cols-1 bg-gray-200 gap-8;
+
+  grid-auto-rows: minmax(328px, max-content);
+  grid-template-rows:
+    minmax(328px, auto)
+    minmax(328px, auto) minmax(328px, auto) minmax(328px, auto);
+  grid-template-areas:
+    'photo'
+    'hello'
+    'maiia';
 }
