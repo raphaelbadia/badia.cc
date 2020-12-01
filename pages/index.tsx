@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import Image from 'next/image';
 import Backdrop from '../components/Backdrop';
 import Block from '../components/Block';
 import Link from '../components/Link';
