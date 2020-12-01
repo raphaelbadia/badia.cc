@@ -6,6 +6,17 @@
   transition: 0.3s all;
 }
 
+.slick-prev::before,
+.slick-next::before {
+  @apply text-gray-900;
+}
+
+.slick-list,
+.slick-track,
+.slick-slide > div {
+  @apply h-full;
+}
+
 /* Start purging... */
 @tailwind components;
 

@@ -1,5 +1,5 @@
 .root {
-  @apply grid grid-cols-1 bg-gray-200 gap-8;
+  @apply grid grid-cols-1 bg-gray-200 gap-8 p-8;
 
   grid-auto-rows: minmax(328px, max-content);
   grid-template-rows:
@@ -8,5 +8,7 @@
   grid-template-areas:
     'photo'
     'hello'
+    'cv'
+    'article'
     'maiia';
 }

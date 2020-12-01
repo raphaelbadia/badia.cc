@@ -1,0 +1,14 @@
+.root {
+  & > div {
+    height: 328px;
+    background-color: skyblue;
+  }
+
+  & > ul {
+    bottom: 12px;
+
+    & > li > button::before {
+      font-size: 12px;
+    }
+  }
+}

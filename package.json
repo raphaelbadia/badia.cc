@@ -19,11 +19,14 @@
     "postcss-nested": "^5.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "reakit": "^1.2.5"
+    "react-slick": "^0.27.13",
+    "reakit": "^1.2.5",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@types/node": "^14.14.6",
     "@types/react": "^16.9.55",
+    "@types/react-slick": "^0.23.4",
     "@typescript-eslint/eslint-plugin": "^4.6.0",
     "@typescript-eslint/parser": "^4.6.0",
     "babel-jest": "^26.6.2",
@@ -40,6 +43,7 @@
     "jest": "^26.6.2",
     "node-mocks-http": "^1.9.0",
     "postcss-flexbugs-fixes": "^5.0.0",
+    "postcss-nesting": "^7.0.1",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.1.2",
     "stylelint": "^13.7.2",

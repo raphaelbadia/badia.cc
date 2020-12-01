@@ -1,0 +1,19 @@
+.root {
+  @apply relative;
+
+  & > div:nth-child(1) {
+    @apply inline;
+  }
+
+  &:hover > div:nth-child(1) {
+    @apply hidden;
+  }
+
+  & > div:nth-child(2) {
+    @apply hidden;
+  }
+
+  &:hover > div:nth-child(2) {
+    @apply inline;
+  }
+}
