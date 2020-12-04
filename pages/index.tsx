@@ -102,7 +102,7 @@ const IndexPage: FC = () => {
       </Block>
 
       <Block gridArea="maiia" className="relative">
-        <Slider>
+        <Slider className="h-full">
           <div className="bg-maiia-blue-main h-full relative">
             <img
               alt="A drawing showing a doctor, as seen on Maiia's website"
@@ -115,18 +115,9 @@ const IndexPage: FC = () => {
               <h2>www.maiia.com</h2>
             </div>
           </div>
-          <div className="bg-maiia-main-main h-full">
-            <h3>3</h3>
+          <div className="bg-maiia-blue-main h-full">
+            <h3>More slide with pictures could be there</h3>
           </div>
-          {/* <div className="bg-maiia-main-main h-full">
-            <h3>4</h3>
-          </div>
-          <div className="bg-maiia-main-main h-full">
-            <h3>5</h3>
-          </div>
-          <div className="bg-maiia-main-main h-full">
-            <h3>6</h3>
-          </div> */}
         </Slider>
       </Block>
     </>

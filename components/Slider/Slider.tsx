@@ -26,7 +26,7 @@ const Slider: FC<Props> = ({ children, className = '' }: Props) => {
   };
 
   return (
-    <div className="relative z-10 pointer-events-auto">
+    <div className={cn('relative z-10 pointer-events-auto', className)}>
       <SlickSlider
         ref={ref}
         {...settings}

@@ -1,6 +1,6 @@
 .root {
   & > div {
-    height: 328px;
+    /* height: 100%; */
   }
 
   & > ul {

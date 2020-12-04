@@ -1,8 +1,16 @@
 .root {
-  @apply relative;
+  @apply relative h-full w-full;
+
+  & > div {
+    @apply h-full w-full;
+  }
 
   & > div:nth-child(1) {
-    @apply inline;
+    @apply block;
+
+    & > div {
+      @apply h-full;
+    }
   }
 
   &:hover > div:nth-child(1) {
@@ -14,6 +22,10 @@
   }
 
   &:hover > div:nth-child(2) {
-    @apply inline;
+    @apply block;
+
+    & > div {
+      @apply h-full;
+    }
   }
 }
