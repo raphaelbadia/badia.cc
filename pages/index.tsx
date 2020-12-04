@@ -115,10 +115,10 @@ const IndexPage: FC = () => {
               <h2>www.maiia.com</h2>
             </div>
           </div>
-          {/* <div className="bg-maiia-main-main h-full">
+          <div className="bg-maiia-main-main h-full">
             <h3>3</h3>
           </div>
-          <div className="bg-maiia-main-main h-full">
+          {/* <div className="bg-maiia-main-main h-full">
             <h3>4</h3>
           </div>
           <div className="bg-maiia-main-main h-full">

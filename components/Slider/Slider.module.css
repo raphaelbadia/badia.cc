@@ -1,7 +1,6 @@
 .root {
   & > div {
     height: 328px;
-    background-color: skyblue;
   }
 
   & > ul {
