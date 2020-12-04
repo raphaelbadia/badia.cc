@@ -15,16 +15,24 @@ const SocialGrid: FC<Props> = ({ className = '' }: Props) => {
   return (
     <div className={cn(s.root, className)}>
       <Link href="https://github.com/raphaelbadia">
-        <Github height="40px" width="40px" />
+        <Github height="40px" width="40px" title="Find my projects on github" />
       </Link>
       <Link href="https://www.linkedin.com/in/raphael-badia/">
-        <Linkedin height="40px" width="40px" />
+        <Linkedin
+          height="40px"
+          width="40px"
+          title="See my resume on linkedin"
+        />
       </Link>
       <Link href="https://dev.to/raphaelbadia/">
-        <DevTo height="40px" width="40px" />
+        <DevTo
+          height="40px"
+          width="40px"
+          title="Read my blog posts on dev.to"
+        />
       </Link>
       <Link href="https://twitter.com/raphaelbadia">
-        <Twitter height="40px" width="40px" />
+        <Twitter height="40px" width="40px" title="follow me on twitter" />
       </Link>
     </div>
   );
