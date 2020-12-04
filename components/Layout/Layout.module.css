@@ -4,11 +4,34 @@
   grid-auto-rows: minmax(328px, max-content);
   grid-template-rows:
     minmax(328px, auto)
-    minmax(328px, auto) minmax(328px, auto) minmax(328px, auto);
+    minmax(328px, auto) minmax(328px, auto);
   grid-template-areas:
     'photo'
     'hello'
     'cv'
     'article'
     'maiia';
+}
+
+@screen md {
+  .root {
+    @apply grid-cols-2;
+
+    grid-template-areas:
+      'cv photo'
+      'cv hello'
+      'article article'
+      'maiia maiia';
+  }
+}
+
+@screen lg {
+  .root {
+    @apply grid-cols-4;
+
+    grid-template-areas:
+      'cv article article photo'
+      'cv hello maiia maiia'
+      '. .      maiia maiia';
+  }
 }
