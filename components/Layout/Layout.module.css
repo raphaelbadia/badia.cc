@@ -29,7 +29,7 @@
 
 @screen lg {
   .root {
-    @apply grid-cols-4  px-40;
+    @apply grid-cols-4;
 
     grid-template-rows: repeat(3, minmax(328px, auto)) auto;
     grid-template-areas:
@@ -37,5 +37,11 @@
       'cv hello maiia maiia'
       'social social maiia maiia'
       'credits credits credits credits';
+  }
+}
+
+@screen 2xl {
+  .root {
+    @apply px-40;
   }
 }
