@@ -76,7 +76,7 @@ const IndexPage: FC = () => {
             <div className="absolute h-full w-full p-10 flex items-end">
               <div className="flex flex-col items-start  justify-end text-white">
                 <span className="bg-white uppercase text-xs px-2 py-1 rounded-md font-semibold text-gray-700">
-                  Dernier article
+                  Last article
                 </span>
                 <h2 className="mt-2 text-3xl font-semibold">
                   How to create an electron-forge project (React, Typescript,
