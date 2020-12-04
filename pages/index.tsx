@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import Head from 'next/head';
 import Backdrop from '../components/Backdrop';
 import Block from '../components/Block';
 import Link from '../components/Link';
@@ -10,6 +11,9 @@ import SocialGrid from '../components/SocialGrid';
 const IndexPage: FC = () => {
   return (
     <>
+      <Head>
+        <title>Raphaël Badia, Frontend engineer</title>
+      </Head>
       <Block gridArea="photo" className="">
         <ImageSwapOnHover
           width={874}
