@@ -10,7 +10,8 @@
     'hello'
     'cv'
     'article'
-    'maiia';
+    'maiia'
+    'social';
 }
 
 @screen md {
@@ -21,7 +22,8 @@
       'cv photo'
       'cv hello'
       'article article'
-      'maiia maiia';
+      'maiia maiia'
+      'social social';
   }
 }
 
@@ -32,6 +34,6 @@
     grid-template-areas:
       'cv article article photo'
       'cv hello maiia maiia'
-      '. .      maiia maiia';
+      'social social maiia maiia';
   }
 }

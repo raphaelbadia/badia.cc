@@ -5,6 +5,7 @@ import Link from '../components/Link';
 import ShiftBy from '../components/ShiftBy';
 import Slider from '../components/Slider';
 import ImageSwapOnHover from '../components/ImageSwapOnHover';
+import SocialGrid from '../components/SocialGrid';
 
 const IndexPage: FC = () => {
   return (
@@ -119,6 +120,10 @@ const IndexPage: FC = () => {
             <h3>More slide with pictures could be there</h3>
           </div>
         </Slider>
+      </Block>
+
+      <Block gridArea="social" className="flex items-center justify-center">
+        <SocialGrid />
       </Block>
     </>
   );
