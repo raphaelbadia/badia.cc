@@ -29,7 +29,7 @@
 
 @screen lg {
   .root {
-    @apply grid-cols-4;
+    @apply grid-cols-4  px-40;
 
     grid-template-rows: repeat(3, minmax(328px, auto)) auto;
     grid-template-areas:
