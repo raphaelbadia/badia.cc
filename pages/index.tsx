@@ -122,8 +122,37 @@ const IndexPage: FC = () => {
         </Slider>
       </Block>
 
-      <Block gridArea="social" className="flex items-center justify-center">
+      <Block
+        gridArea="social"
+        className="p-10 flex items-center justify-center"
+      >
         <SocialGrid />
+      </Block>
+
+      <Block gridArea="credits" className="p-10">
+        <h2 className="text-2xl mb-3">Credits</h2>
+        <p>
+          Forge photo by{' '}
+          <a
+            href="https://unsplash.com/@neonbrand?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
+            className="font-bold"
+          >
+            NeONBRAND
+          </a>{' '}
+          on{' '}
+          <a
+            href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
+            className="font-bold"
+          >
+            Unsplash
+          </a>
+        </p>
+        <p>
+          Maiia&apos;s illustration belong to{' '}
+          <a href="https://maiia.com" className="font-bold">
+            Maiia
+          </a>
+        </p>
       </Block>
     </>
   );
