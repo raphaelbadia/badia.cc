@@ -1,4 +1,4 @@
-import { FC, ReactNode, useRef, useState } from 'react';
+import { FC, ReactNode, useRef } from 'react';
 import cn from 'classnames';
 import SlickSlider from 'react-slick';
 import { Clickable } from 'reakit';
