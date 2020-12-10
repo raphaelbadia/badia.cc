@@ -120,9 +120,6 @@ const IndexPage: FC = () => {
               <h2>www.maiia.com</h2>
             </div>
           </div>
-          <div className="bg-maiia-blue-main h-full">
-            <h3>More slide with pictures could be there</h3>
-          </div>
         </Slider>
       </Block>
 

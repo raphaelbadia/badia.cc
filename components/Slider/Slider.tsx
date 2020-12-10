@@ -11,18 +11,14 @@ interface Props {
 
 const Slider: FC<Props> = ({ children, className = '' }: Props) => {
   const ref = useRef<SlickSlider>();
-  const [slide, setSlide] = useState(0);
   const settings = {
     dots: true,
     autoplay: false,
   };
 
   const handleChange = (num: number) => () => {
-    let nextIndex = slide + num;
-    if (nextIndex >= children.length) nextIndex = 0;
-    if (nextIndex < 0) nextIndex = children.length - 1;
-    ref.current?.slickGoTo(nextIndex);
-    setSlide(nextIndex);
+    if (num > 0) ref.current?.slickNext();
+    else ref.current?.slickPrev();
   };
 
   return (
